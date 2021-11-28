@@ -6,10 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Studio</title>
         <link rel="stylesheet" href="./css/modern-normalize.css">
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -22,7 +19,7 @@
                 <nav class="menu">
                     <a href="./index.html" class="logo link"><span class="web">Web</span class="studio">Studio</a>
                         <ul class="menu-nav">
-                            <li class="menu-nav-item"> <a href="" class="menu-nav-link">Студия</a></li>
+                            <li class="menu-nav-item active"> <a href="./index.html" class="menu-nav-link">Студия</a></li>
                             <li class="menu-nav-item"> <a href="./portfolio.html" class="menu-nav-link">Портфолио</a></li>
                             <li class="menu-nav-item"> <a href="" class="menu-nav-link">Контакты</a></li>
                         </ul>
@@ -52,7 +49,9 @@
                     <section class="hero">
                         <div class="container">
                             <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса </br> </h1>
-                            <button type="button" class="main-button">Заказать услугу</button>
+                            <button type="button" class="main-button" data-modal-open>
+                                Заказать услугу
+                            </button>
                         </div>
                         </section>
                     <!--features-->
@@ -104,9 +103,18 @@
                             <div class="container">
                                 <h2 class="section-title">Чем мы занимаемся</h2>
                                 <ul class="about">
-                                    <li class="about-item"><img src="./images/box1.jpg" alt="coding" width="370" height="294"></li>
-                                    <li class="about-item"><img src="./images/box2.jpg" alt="testing" width="370" height="294"></li>
-                                    <li class="about-item"><img src="./images/box3.jpg" alt="design" width="370" height="294"></li>
+                                    <li class="about-item">
+                                        <img src="./images/box1.jpg" alt="coding" width="370" height="294">
+                                        <p class="about-item-text">Десктопные приложения</p>
+                                    </li>
+                                    <li class="about-item">
+                                        <img src="./images/box2.jpg" alt="testing" width="370" height="294">
+                                        <p class="about-item-text">Мобильные приложения</p>
+                                    </li>
+                                    <li class="about-item">
+                                        <img src="./images/box3.jpg" alt="design" width="370" height="294">
+                                        <p class="about-item-text">Дизайнерские решения</p>
+                                    </li>
                                 </ul>
                             </div>
                         </section>
@@ -364,5 +372,15 @@
                     </div>
                 </div>
             </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type ="button" class="modal-close" data-modal-close>
+                    <svg class="modal-close-icon" width="11px" height="11px">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
